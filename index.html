@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أنا سعد (بتال) - القانونية التحقيقية</title>
+    <title>موقع القانونية التحقيقية</title>
     <style>
         body {
             background-image: url('https://raw.githubusercontent.com/oontgi199/The977/main/IMG_9665.jpeg');
@@ -14,70 +14,74 @@
             margin: 0;
             padding: 0;
         }
-
         header {
             text-align: center;
-            padding: 50px 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
         }
-
         h1 {
-            font-size: 50px;
-            margin: 0;
+            font-size: 3em;
         }
-
+        h2 {
+            font-size: 2em;
+            margin-top: -10px;
+        }
         nav {
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
             padding: 10px 0;
         }
-
         nav a {
             color: white;
-            padding: 14px 20px;
             text-decoration: none;
-            display: inline-block;
+            margin: 0 20px;
+            font-size: 1.2em;
         }
-
         nav a:hover {
-            background-color: #575757;
+            text-decoration: underline;
         }
-
-        section {
-            padding: 20px;
-            margin: 0 10%;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 8px;
+        .content {
+            padding: 50px;
         }
-
         footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
             text-align: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            position: absolute;
-            bottom: 0;
+        }
+        .bio {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .image {
             width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>أنا سعد (بتال) - أهلا بكم في موقع القانونية التحقيقية</h1>
+        <h1>مرحباً بكم في موقع القانونية التحقيقية</h1>
+        <h2>سيرة ذاتية</h2>
     </header>
 
     <nav>
-        <a href="#about">عن الموقع</a>
-        <a href="#contact">اتصل بنا</a>
+        <a href="#">الرئيسية</a>
+        <a href="#">معلومات</a>
+        <a href="#">اتصل بنا</a>
     </nav>
 
-    <section id="about">
-        <h2>السيرة الذاتية للموقع</h2>
-        <p>هذا الموقع يقدم محتوى قانوني تحقيقي، يساعد المهتمين بالقوانين وحقوق الإنسان في الاطلاع على المواضيع القانونية.</p>
-    </section>
+    <div class="content">
+        <section class="bio">
+            <p>أنا سعد أو بالاسم المستعار بتال، أعمل في مجال القانونية التحقيقية وأحب مشاركة معرفتي عبر هذا الموقع.</p>
+            <img src="https://raw.githubusercontent.com/oontgi199/The977/main/IMG_9663.jpeg" alt="صورة شخصية" class="image">
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 موقع القانونية التحقيقية</p>
+        <p>&copy; 2024 جميع الحقوق محفوظة.</p>
     </footer>
 
 </body>
