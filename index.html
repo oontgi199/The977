@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع الأخبار - سعد بتال</title>
+    <title>موقع الأخبار</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,33 +54,21 @@
             width: 100%;
             bottom: 0;
         }
-        .news-item {
-            background-color: #fff;
+        #news {
+            margin-top: 20px;
+        }
+        .article {
             margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .news-item h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-        .news-item p {
-            color: #555;
-        }
-        .news-item a {
+        .article h3 {
             color: #003366;
-            text-decoration: none;
-        }
-        .news-item a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>موقع الأخبار - سعد بتال</h1>
+    <h1>موقع الأخبار</h1>
 </header>
 
 <nav>
@@ -100,6 +88,9 @@
         <h2>عنوان رئيسي للخبر الثاني</h2>
         <p>هنا تفاصيل الخبر الثاني...</p>
         <img src="IMG_9665.jpeg" alt="صورة الخبر" style="width: 100%; height: auto;">
+        
+        <!-- هنا ستظهر الأخبار التلقائية -->
+        <div id="news"></div>
     </div>
 
     <div class="sidebar">
@@ -110,9 +101,6 @@
             <li><a href="#">خبر سريع 3</a></li>
             <li><a href="#">خبر سريع 4</a></li>
         </ul>
-
-        <h3>آخر الأخبار</h3>
-        <div id="news-container"></div>
     </div>
 </div>
 
@@ -121,27 +109,26 @@
 </footer>
 
 <script>
-    async function fetchNews() {
-        const apiKey = '073b8c84bfb54199a63ca238513b25a2
-        const response = await fetch(`https://newsapi.org/v2/everything?q=apple&from=2024-12-30&to=2024-12-30&sortBy=popularity&apiKey=${apiKey}`);
-        const data = await response.json();
-        const articles = data.articles;
+    const apiKey = '073b8c84bfb54199a63ca238513b25a2';
+    const url = `https://newsapi.org/v2/everything?q=apple&from=2024-12-30&to=2024-12-30&sortBy=popularity&apiKey=${apiKey}`;
 
-        let newsHTML = '';
-        articles.forEach(article => {
-            newsHTML += `
-                <div class="news-item">
-                    <h3>${article.title}</h3>
-                    <p>${article.description}</p>
-                    <a href="${article.url}" target="_blank">اقرأ المزيد</a>
-                </div>
-            `;
-        });
-
-        document.getElementById('news-container').innerHTML = newsHTML;
-    }
-
-    fetchNews();
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const articles = data.articles;
+            let newsContent = '';
+            articles.forEach(article => {
+                newsContent += `
+                    <div class="article">
+                        <h3>${article.title}</h3>
+                        <p>${article.description}</p>
+                        <a href="${article.url}" target="_blank">اقرأ المزيد</a>
+                    </div>
+                `;
+            });
+            document.getElementById('news').innerHTML = newsContent;
+        })
+        .catch(error => console.error('Error fetching the news:', error));
 </script>
 
 </body>
