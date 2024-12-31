@@ -3,86 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع القانونية التحقيقية</title>
+    <title>موقع الأخبارية - سعد، بتال</title>
     <style>
         body {
-            background-image: url('https://raw.githubusercontent.com/oontgi199/The977/main/IMG_9665.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         header {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
             text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 3em;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: -10px;
         }
         nav {
-            background-color: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            padding: 10px 0;
+            background-color: #111;
+            overflow: hidden;
         }
         nav a {
+            float: left;
+            display: block;
             color: white;
+            padding: 14px 20px;
+            text-align: center;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #575757;
         }
         .content {
-            padding: 50px;
+            display: flex;
+            margin: 20px;
         }
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            text-align: center;
+        .main-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #ddd;
             padding: 20px;
         }
-        .bio {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-        .image {
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
             width: 100%;
-            height: auto;
-            display: block;
-            margin-top: 20px;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>مرحباً بكم في موقع القانونية التحقيقية</h1>
-        <h2>سيرة ذاتية</h2>
-    </header>
+<header>
+    <h1>موقع الأخبارية - سعد، بتال</h1>
+</header>
 
-    <nav>
-        <a href="#">الرئيسية</a>
-        <a href="#">معلومات</a>
-        <a href="#">اتصل بنا</a>
-    </nav>
+<nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">الأخبار</a>
+    <a href="#">العالم</a>
+    <a href="#">الرياضة</a>
+    <a href="#">الاقتصاد</a>
+</nav>
 
-    <div class="content">
-        <section class="bio">
-            <p>أنا سعد أو بالاسم المستعار بتال، أعمل في مجال القانونية التحقيقية وأحب مشاركة معرفتي عبر هذا الموقع.</p>
-            <img src="https://raw.githubusercontent.com/oontgi199/The977/main/IMG_9663.jpeg" alt="صورة شخصية" class="image">
-        </section>
+<div class="content">
+    <div class="main-content">
+        <h2>عنوان رئيسي للخبر الأول</h2>
+        <p>هنا تفاصيل الخبر الأول...</p>
+        <img src="IMG_9665.jpeg" alt="صورة الخبر" style="width: 100%; height: auto;">
+
+        <h2>عنوان رئيسي للخبر الثاني</h2>
+        <p>هنا تفاصيل الخبر الثاني...</p>
+        <img src="IMG_9665.jpeg" alt="صورة الخبر" style="width: 100%; height: auto;">
     </div>
 
-    <footer>
-        <p>&copy; 2024 جميع الحقوق محفوظة.</p>
-    </footer>
+    <div class="sidebar">
+        <h3>أخبار سريعة</h3>
+        <ul>
+            <li><a href="#">خبر سريع 1</a></li>
+            <li><a href="#">خبر سريع 2</a></li>
+            <li><a href="#">خبر سريع 3</a></li>
+            <li><a href="#">خبر سريع 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>حقوق الطبع والنشر © 2024</p>
+</footer>
 
 </body>
 </html>
